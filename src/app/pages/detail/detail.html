@@ -1,0 +1,22 @@
+<div>
+    <h1>Hi! choose your hookah</h1>
+    <a href="/#/size">Next</a>
+    <table class="hookah-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Liquid</th>
+            <th>Tabacco</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="hookah in vmHome.hookahList track by $index">
+            <td ng-bind="hookah.name"></td>
+            <td ng-bind="hookah.size"></td>
+            <td ng-bind="hookah.liquid"></td>
+            <td ng-bind="hookah.tabacco"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
