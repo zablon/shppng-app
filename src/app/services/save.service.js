@@ -1,49 +1,15 @@
 export default class SaveService {
     constructor() {
-        this.clearHookah();
+        this.savedCartItems = [];
+        this.phone = {};
     }
 
-    saveSize(size) {
-        this.hookah.size = size;
+    addToSavedCartItems(item) {
+        this.savedCartItems.push(item);
     }
 
-    saveLiquid(liquid) {
-        this.hookah.liquid = liquid;
+    phoneDetail(phone) {
+        this.phone = phone;
     }
 
-    saveTabacco(tabacco) {
-        this.hookah.tabacco = tabacco;
-    }
-
-    saveName(name) {
-        this.hookah.name = name;
-    }
-
-    clearHookah() {
-        this.hookah = {
-            size: null,
-            liquid: null,
-            tabacco: null,
-            name: null
-        };
-    }
-
-    getHookah() {
-        return this.hookah;
-    }
-
-    getSize() {
-        return this.hookah.size;
-    }
-
-    getLiquid() {
-        return this.hookah.liquid;
-    }
-
-    getTabacco() {
-        return this.hookah.tabacco;
-    }
-    getName() {
-        return this.hookah.name;
-    }
 }

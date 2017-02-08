@@ -2,6 +2,7 @@ require('./global.css');
 
 import angular from 'angular';
 import angularUiRouter from 'angular-ui-router';
+import 'bootstrap-css';
 import routing from './configs/routing';
 import SaveService from './services/save.service';
 import StorageService from './services/storage.service';

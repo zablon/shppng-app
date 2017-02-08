@@ -1,24 +1,24 @@
-form:invalid input{
-    border: 2px solid crimson;
+.navbar-default {
+    background-color: grey;
+    color: white;
+}
+.navbar .form-control{
+    border-radius: 20px;
 }
 
-.hookah-table {
-    border: solid 1px #DDEEEE;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font: normal 13px Arial, sans-serif;
+.phone{
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 50px;
+    margin-top: 20px;
 }
-.hookah-table thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
-    padding: 10px;
-    text-align: left;
-    text-shadow: 1px 1px 1px #fff;
+
+.buy{
+    width: 30px;
+    height: 30px;
+    background: white;
 }
-.hookah-table tbody td {
-    border: solid 1px #DDEEEE;
-    color: #333;
-    padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
+
+.hide{
+    display:none;
 }

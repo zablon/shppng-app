@@ -1,3 +1,65 @@
 <div>
-   <div></div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span>Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <button class="nav navbar-nav pull-right buy" ng-click="vmList.showCartItems()">buy</button>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <div class="dropdown-menu" ng-class="{'hide': !vmList.isShowMyCart}">{{vmList.isShowMyCart}}
+                            <div ng-repeat="item in vmList.cartItems track by $index">
+                                <p ng-bind="item.name"></p>
+                                <img ng-src="{{item.imgUrl}}" alt="{{item.imgUrl}}">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <form class="navbar-form pull-right">
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="vmList.search" placeholder="Search">
+                        </div>
+                        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                    </form>
+                    <!--<ul class="nav navbar-nav navbar-right">-->
+
+                        <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                               <!--aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+
+                            <!--<div class="dropdown-menu">-->
+
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                </ul>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-sm-offset-0 col-md-offset-3 phone" ng-repeat="phone in vmList.phoneList | filter:vmList.search track by $index" ui-sref="detail({'phoneId': phone.id})">
+            <div>
+                <h1 ng-bind="phone.name"></h1>
+                <img ng-src="{{phone.imageUrl}}" alt="{{imageUrl}}">
+
+                <p ng-bind="phone.snippet"></p>
+                <p>Price: <span ng-bind="phone.price | currency"></span></p>
+            </div>
+            <button ng-click="vmList.addToCart($index)">Add to cart</button>
+        </div>
+    </div>
 </div>
+

@@ -1,6 +1,6 @@
 export default class DetailController{
-    constructor(){
-
+    constructor($state){
+        console.log($state)
     }
 
 }
