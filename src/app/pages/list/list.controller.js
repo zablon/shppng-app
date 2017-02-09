@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-export default class ListController {
+export default class ListPageController {
     constructor(PhoneApiService, SaveService, $state) {
         this._phoneApiService = PhoneApiService;
         this._saveService = SaveService;
@@ -13,7 +13,7 @@ export default class ListController {
 
     getPhoneList() {
         this._phoneApiService.getPhones().then((response)=> {
-            this.phoneList = response.data;
+            this.phoneList = response;
         })
     }
 

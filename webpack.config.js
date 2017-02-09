@@ -54,7 +54,9 @@ var webpackConfig = {
     },
     postcss: function () {
         return [precss, autoprefixer];
-    }
+    },
+    devServer: {inline: true},
+    historyApiFallback: true
 };
 
 

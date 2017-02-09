@@ -5,5 +5,10 @@ module.exports = {
     url: '/detail/:phoneId',
     template: require('./detail.html'),
     controller: DetailCtrl,
-    controllerAs: 'vmDetail'
+    controllerAs: 'vmDetail',
+    resolve:{
+        phone: (PhoneApiService, $stateParams)=>{
+            return PhoneApiService.getPhone($stateParams.phoneId);
+        }
+    }
 };

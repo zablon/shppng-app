@@ -1,6 +1,7 @@
 export default class DetailController{
-    constructor($state){
-        console.log($state)
+    constructor(phone){
+        this.phone = phone;
     }
+
 
 }

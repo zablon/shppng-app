@@ -1,9 +1,9 @@
-import ListCtrl from './list.controller';
+import ListPageCtrl from './list.controller';
 
 module.exports = {
     name:'list',
     url: '/list',
     template: require('./list.html'),
-    controller: ListCtrl,
-    controllerAs: 'vmList'
+    controller: ListPageCtrl,
+    controllerAs: 'vmListPage'
 };
