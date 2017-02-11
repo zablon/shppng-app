@@ -1,10 +1,9 @@
 import angular from 'angular';
 
 export default class ListPageController {
-    constructor(PhoneApiService, SaveService, $state) {
+    constructor(PhoneApiService, SaveService) {
         this._phoneApiService = PhoneApiService;
         this._saveService = SaveService;
-        this._state = $state;
         this.phoneList = [];
         this.cartItems = [];
         this.getPhoneList();

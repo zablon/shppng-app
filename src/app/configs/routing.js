@@ -4,9 +4,6 @@ export default function routing($stateProvider, $urlRouterProvider, $locationPro
     $stateProvider
         .state(require('../pages/list'))
         .state(require('../pages/detail'));
-    //.state(require('../pages/add.liquid'))
-        //.state(require('../pages/add.tabacco'))
-        //.state(require('../pages/finish'));
 
     $qProvider.errorOnUnhandledRejections(false);
 }
