@@ -1,15 +1,13 @@
 export default class SaveService {
     constructor() {
-        this.savedCartItems = [];
-        this.phone = {};
+       this.savedCartItems = [];
     }
 
-    addToSavedCartItems(item) {
-        this.savedCartItems.push(item);
-    }
+    addToSavedCartItems(item, index) {
 
-    phoneDetail(phone) {
-        this.phone = phone;
+        if (this.savedCartItems.indexOf(this.savedCartItems[index]) == -1) {
+            this.savedCartItems.push(item);
+        }
     }
 
 }

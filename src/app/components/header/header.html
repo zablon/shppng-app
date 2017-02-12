@@ -12,12 +12,12 @@
                 </form>
 
             </ul>
-            <button class="nav navbar-nav pull-right buy" ng-click="vmHeader.searchModel">buy</button>
-            <div class="pull-right">
-                <div ng-repeat="cartItem in vmHeader.cartItems track by $index">
-                    <p ng-bind="cartItem.name"></p>
-                    <img src="" alt="">
-                    <p ng-bind="cartItem.price"></p>
+            <button class="nav navbar-nav pull-right buy" ng-click="vmHeader.showCartItems(vmHeader.isShowCartItems = true)">buy</button>
+            <div class="pull-right carts" ng-if="vmHeader.isShowCartItems">
+                <div ng-repeat="cartItem in vmHeader.cartItems track by $index" class="cart">
+                    <p ng-bind="cartItem.name">></p>
+                    <img ng-src="{{cartItem.imgUrl}}" alt="img">
+                    <p >Price: <span ng-bind="cartItem.price"></span></p>
                 </div>
             </div>
         </div>

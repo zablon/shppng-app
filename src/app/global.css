@@ -23,3 +23,16 @@
 .hide{
     display:none;
 }
+
+.carts{
+    color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 50px;
+    background: grey;
+}
+
+.cart{
+    padding: 20px;
+    border: 2px solid white;
+}

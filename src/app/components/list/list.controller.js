@@ -1,14 +1,10 @@
 export default class ListController {
-    constructor() {
-        this.cartItems = [];
+    constructor(SaveService) {
+        this.saveService = SaveService;
     }
 
     addToCart(index) {
-        if (this.cartItems.indexOf(this.cartItems[index]) == -1) {
-            this.cartItems.push(this.phones[index]);
-            console.log(this.cartItems)
-        }
-
+        this.saveService.addToSavedCartItems(this.phones[index], index);
     }
 
 
