@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-6 col-sm-12 col-sm-offset-0 col-md-offset-3 phone"
          ng-repeat="phone in vmList.phones | filter:vmList.search track by $index">
+
         <div>
             <h1 ng-bind="phone.name"></h1>
             <img ng-src="{{phone.imageUrl}}" alt="{{imageUrl}}">

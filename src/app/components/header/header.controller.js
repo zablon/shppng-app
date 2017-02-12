@@ -1,5 +1,5 @@
 export default class HeaderController{
     constructor(){
-        console.log(this.onSearch)
+        console.log(this.cartItems)
     }
 }

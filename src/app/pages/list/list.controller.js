@@ -8,6 +8,7 @@ export default class ListPageController {
         this.cartItems = [];
         this.getPhoneList();
         this.isShowMyCart = false;
+        this.search = '';
     }
 
     getPhoneList() {
@@ -16,12 +17,7 @@ export default class ListPageController {
         })
     }
 
-    addToCart(index) {
-        if (this.cartItems.indexOf(this.cartItems[index]) == -1) {
-            this._saveService.addToSavedCartItems(this.phoneList[index])
-        }
 
-    }
 
     showCartItems() {
         this.isShowMyCart = true;

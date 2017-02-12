@@ -2,7 +2,8 @@ import ListCtrl from './list.controller';
 
 export default {
     bindings: {
-        phones : '<phoneList'
+        phones: '<phoneList',
+        search: '<'
     },
     template: require('./list.html'),
     controller: ListCtrl,

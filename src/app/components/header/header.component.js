@@ -2,7 +2,8 @@ import HeaderCtrl from './header.controller';
 
 export default {
     bindings: {
-        onSearch: '<'
+        search: '=',
+        cartItems: '<'
     },
     template: require('./header.html'),
     controller: HeaderCtrl,

@@ -3,20 +3,20 @@ export default class PhoneApiService {
         this._http = $http;
     }
 
-    getPhones() {
-        return this._http.get('http://cdn.rawgit.com/angular/angular-phonecat/master/app/phones/phones.json').then((response)=>{
-            return response.data;
-        });
-    }
-
-    getPhone(id) {
+    getPhones(id) {
         return this._http.get('http://cdn.rawgit.com/angular/angular-phonecat/master/app/phones/phones.json').then((response)=> {
-            for (let i = 0; i < response.data.length; i++) {
-                if (response.data[i].id === id) {
-                    return response.data[i];
+            response.data.forEach(function (obj) {
+                obj.price = Math.floor(Math.random() * 1000) + 500;
+            });
+            if (id) {
+                for (let i = 0; i < response.data.length; i++) {
+                    if (response.data[i].id === id) {
+                        return response.data[i];
+                    }
                 }
+                return null;
             }
-            return null;
+            return response.data;
         });
     }
 }

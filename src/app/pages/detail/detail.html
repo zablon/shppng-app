@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-6 col-sm-12 col-sm-offset-0 col-md-offset-3 phone">
         <div>
-            <h1 ng-bind=" vmDetail.phone.name | filter:vmDetail.search"></h1>
+            <h1 ng-bind=" vmDetail.phone.name"></h1>
             <img ng-src="{{ vmList.phone.imageUrl}}" alt="{{ vmList.phone.name}}">
 
             <p ng-bind="vmDetail.phone.snippet | filter:vmDetail.search"></p>

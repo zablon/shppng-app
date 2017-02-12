@@ -8,7 +8,7 @@ module.exports = {
     controllerAs: 'vmDetail',
     resolve:{
         phone: (PhoneApiService, $stateParams)=>{
-            return PhoneApiService.getPhone($stateParams.phoneId);
+            return PhoneApiService.getPhones($stateParams.phoneId);
         }
     }
 };
